@@ -56,7 +56,6 @@ function Timer({ isClose, resetTimer, reset, onTimeChange }) {
 
   return <p className="ShowQ-time">{formatTime(seconds)}</p>;
 }
-
 // Composant principal ShowQuestion
 function ShowQuestion() {
   const navigate = useNavigate();

@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import "./App.css";
 import PlayerProvider from "./contexts/PlayerContext";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
         <main>
           <Outlet />
         </main>
-        <footer>
+        {/* <footer>
           <Footer />
-        </footer>
+        </footer> */}
       </PlayerProvider>
     </div>
   );

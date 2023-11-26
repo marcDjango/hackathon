@@ -1,9 +1,9 @@
 .ShoWQ-contain {
-  background-image: url("../../assets/imagehomepage.png");
+  background-image: url("../../assets/icons/fonduser.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: calc(100dvh - 100px);
+  min-height: calc(100dvh);
   width: 100%;
   position: relative;
   display: flex;
@@ -14,8 +14,13 @@
   .ShowQ-modal {
     position: absolute;
     width: 100%;
-    height: 100%;
-    background-color: #ee3448;
+    height: 100dvh;
+    background-image: url("../../assets/icons/fonduser.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    // background-color: #ee3448;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -34,7 +39,11 @@
       text-align: center;
       color: white;
       font-family: sans-serif;
-      font-size: 90px;
+      font-size: clamp(40px, 3vw, 90px);
+      /* 30px est la taille de police minimale, 5vw est une valeur relative à la largeur de la vue,
+         et 90px est la taille de police maximale. Vous pouvez ajuster ces valeurs selon vos besoins. */
+      overflow: hidden;
+      white-space: nowrap; /* Empêche le texte de passer à la ligne */
       text-transform: uppercase;
     }
 
@@ -44,6 +53,7 @@
       justify-content: center;
       background-color: #0d9b2c;
       width: 70%;
+      max-width: 350px;
       height: 4rem;
       margin: 0 auto;
       border-radius: 16px;
@@ -58,6 +68,7 @@
         border-radius: 8px;
         font-family: "Text-font";
         font-size: 2rem;
+        cursor: pointer;
       }
     }
   }

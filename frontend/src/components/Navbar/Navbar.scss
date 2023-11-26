@@ -1,8 +1,7 @@
 .navbar-container {
-  position: relative;
+  position: absolute;
   display: flex;
   height: 60px;
-  background-color: #ff7878;
   align-items: center;
   .navbar-logo {
     position: absolute;
@@ -21,12 +20,12 @@
 .menuburger-modal {
   position: absolute;
   width: 100%;
-  top: 60px;
+  top: 0;
   left: 0;
   margin: 0;
   padding: 0;
   // min-height: calc(100dvh - 160px);
-  height: calc(100dvh - 100px);
+  height: calc(100dvh);
   background: transparent;
   backdrop-filter: blur(0);
   opacity: 1;

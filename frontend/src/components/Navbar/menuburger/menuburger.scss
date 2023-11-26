@@ -1,4 +1,5 @@
 .menuburger-contain {
+  z-index: 99;
   .menu-burger {
     width: 20px;
     height: 14px;
@@ -63,6 +64,6 @@
   }
 
   .menu-burger--is-active:before {
-    transform: rotate3d(0, 0, 1, -415deg) translate3d(2px, 2px, 0);
+    transform: rotate3d(0, 0, 1, -415deg) translate3d(2px, 1px, 0);
   }
 }
