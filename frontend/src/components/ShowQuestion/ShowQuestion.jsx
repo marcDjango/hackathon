@@ -92,17 +92,10 @@ function ShowQuestion() {
     }
   }, [players, category, limit, difficulty, index]);
 
-  // Fonction pour attribuer des points en fonction du temps écoulé
   const calculatePoints = () => {
     const maxPoints = 100;
     const timeLimit = 30;
-
-    // elapsedTime représente le temps écoulé depuis le début de la question jusqu'à la réponse du joueur
-    // elapsedTime est supposé être un nombre décroissant de 30 à 0
-    // (30 secondes au début et 0 secondes lorsque le temps est écoulé)
     const elapsedTimeRatio = elapsedTime / timeLimit;
-
-    // La formule ajustée pour attribuer plus de points pour des réponses plus rapides
     const points = Math.max(0, Math.round(elapsedTimeRatio * maxPoints));
 
     return points;
@@ -121,7 +114,6 @@ function ShowQuestion() {
         console.log(players[index].points);
       }
 
-      // Code spécifique à chaque branche de la condition
       if (index < players.length - 1) {
         setIndex((prevIndex) => prevIndex + 1);
       } else {
@@ -153,7 +145,6 @@ function ShowQuestion() {
     );
   };
 
-  // Fonction de rappel pour réinitialiser la minuterie
   const resetTimerCallback = () => {
     setResetTimer(false);
   };
